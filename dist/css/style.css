@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Spartan", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #502050;
+  width: 100vw;
+  height: 100vh;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#main .bg-top-dt,
+#main .bg-btm-dt {
+  position: absolute;
+}
+
+#main .bg-top-dt {
+  top: 0;
+  left: 0;
+}
+
+#main .bg-btm-dt {
+  bottom: 0;
+  right: 0;
+}
+
+#main .bg-top-mb,
+#main .bg-btm-mb {
+  display: none;
+}
+
+#main-content-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 110rem;
+  height: 55rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "top" "bottom";
+}
+
+#top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 0.5fr;
+      grid-template-rows: 0.5fr;
+      grid-template-areas: "top-left top-right";
+}
+
+#top-left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top-left;
+}
+
+#top-left h1 {
+  width: 40rem;
+  font-size: 3.8rem;
+  padding-bottom: 1.5rem;
+}
+
+#top-left p {
+  font-weight: 500;
+  width: 48rem;
+  line-height: 2rem;
+  color: #937b92;
+}
+
+#top-right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: top-right;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.1fr 0.1fr 0.8fr 0.1fr 0.1fr;
+      grid-template-columns: 0.1fr 0.1fr 0.8fr 0.1fr 0.1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "box1 box1 box1 .    .   " ".    box2 box2 box2 .   " ".    .    box3 box3 box3";
+}
+
+#top-right .rate-box1, #top-right .rate-box2, #top-right .rate-box3 {
+  background-color: #f7f2f7;
+  border-radius: 0.8rem;
+  width: 40rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#top-right .rate-box1 p, #top-right .rate-box2 p, #top-right .rate-box3 p {
+  margin-left: 3rem;
+  font-weight: 700;
+}
+
+#top-right .rate-box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: box1;
+}
+
+#top-right .rate-box2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: box2;
+}
+
+#top-right .rate-box3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: box3;
+}
+
+#bottom {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.05fr 0.05fr 0.8fr 0.05fr 0.05fr;
+      grid-template-rows: 0.05fr 0.05fr 0.8fr 0.05fr 0.05fr;
+  grid-column-gap: 2.5rem;
+      grid-template-areas: "card1 .     ." "card1 card2 . " "card1 card2 card3" ".     card2 card3" ".     .     card3";
+}
+
+#bottom .card1, #bottom .card2, #bottom .card3 {
+  background-color: #502050;
+  border-radius: 0.8rem;
+  padding: 3rem;
+  color: #f7f2f7;
+}
+
+#bottom .card1 .name-plate, #bottom .card2 .name-plate, #bottom .card3 .name-plate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+#bottom .card1 .name-plate img, #bottom .card2 .name-plate img, #bottom .card3 .name-plate img {
+  width: 4.5rem;
+  border-radius: 50%;
+}
+
+#bottom .card1 .name-plate .info, #bottom .card2 .name-plate .info, #bottom .card3 .name-plate .info {
+  margin-left: 2rem;
+}
+
+#bottom .card1 .name-plate .info p, #bottom .card2 .name-plate .info p, #bottom .card3 .name-plate .info p {
+  color: #ee68a4;
+}
+
+#bottom .card1 .name-plate .info .name, #bottom .card2 .name-plate .info .name, #bottom .card3 .name-plate .info .name {
+  color: white;
+  font-weight: 700;
+}
+
+#bottom .card1 .message, #bottom .card2 .message, #bottom .card3 .message {
+  line-height: 2.3rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+#bottom .card1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: card1;
+}
+
+#bottom .card2 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: card2;
+}
+
+#bottom .card3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: card3;
+}
+
+.attribution {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+}
+
+.attribution p {
+  display: inline-block;
+  line-height: 2rem;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 1150px) {
+  #main-content-wrapper {
+    width: 80%;
+  }
+  #top-left {
+    width: 30rem;
+  }
+  #top-left h1 {
+    font-size: 3.8rem;
+  }
+  #top-left p {
+    font-size: 1.3rem;
+    width: 32rem;
+  }
+  #top-right {
+    width: 15rem;
+    font-size: 1.2rem;
+  }
+  #top-right .rate-box1, #top-right .rate-box2, #top-right .rate-box3 {
+    width: 35rem;
+  }
+  #bottom .card1, #bottom .card2, #bottom .card3 {
+    padding: 2rem;
+    width: 100%;
+  }
+  #bottom .card1 .name-plate, #bottom .card2 .name-plate, #bottom .card3 .name-plate {
+    font-size: 1.2rem;
+  }
+  #bottom .card1 .message, #bottom .card2 .message, #bottom .card3 .message {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 945px) {
+  body {
+    background-image: url(../images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  #main {
+    background-image: url(../images/bg-pattern-bottom-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 100vw;
+    height: 190rem;
+  }
+  #main .bg-top-dt,
+  #main .bg-btm-dt {
+    display: none;
+  }
+  #main footer {
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #main-content-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #top {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #top-left {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #top-left h1 {
+    width: 30rem;
+    font-size: 3rem;
+  }
+  #top-left p {
+    font-weight: 500;
+    font-size: 1.3rem;
+    width: 30rem;
+    line-height: 2.5rem;
+    color: #937b92;
+  }
+  #top-right {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #top-right .rate-box1, #top-right .rate-box2, #top-right .rate-box3 {
+    width: 30rem;
+    height: 6rem;
+    margin-top: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #top-right .rate-box1 .stars img, #top-right .rate-box2 .stars img, #top-right .rate-box3 .stars img {
+    width: 1.4rem;
+    margin: 0.2rem;
+  }
+  #top-right .rate-box1 p, #top-right .rate-box2 p, #top-right .rate-box3 p {
+    margin-left: 0;
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+  }
+  #bottom {
+    padding-bottom: 8rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #bottom .card1, #bottom .card2, #bottom .card3 {
+    width: 30rem;
+    margin-top: 2rem;
+  }
+  #bottom .card1 .name-plate, #bottom .card2 .name-plate, #bottom .card3 .name-plate {
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  #bottom .card1 .name-plate img, #bottom .card2 .name-plate img, #bottom .card3 .name-plate img {
+    width: 4rem;
+  }
+  #bottom .card1 .name-plate .info, #bottom .card2 .name-plate .info, #bottom .card3 .name-plate .info {
+    font-size: 1.3rem;
+  }
+  #bottom .card1 .message, #bottom .card2 .message, #bottom .card3 .message {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #bottom {
+    background-image: url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+}
+/*# sourceMappingURL=style.css.map */
